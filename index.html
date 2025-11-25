@@ -1,272 +1,358 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="bn">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio — Nasif Abdullah Pinaru</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio — Nasif Abdullah Pinaru</title>
 
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#06b6d4',
-            accent: '#0ea5a4'
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#06b6d4",
+              accent: "#0ea5a4",
+            },
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+            },
           },
-          fontFamily: {
-            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
+        },
+      };
+    </script>
 
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <meta name="description" content="Personal portfolio — Nasif Abdullah Pinaru. Skills, services, projects and contact.">
-</head>
-<body class="bg-white text-gray-800 antialiased">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <meta
+      name="description"
+      content="Personal portfolio — Nasif Abdullah Pinaru. Skills, services, projects and contact."
+    />
+  </head>
+  <body class="bg-white text-gray-800 antialiased">
+    <header class="fixed w-full bg-white/80 backdrop-blur z-40 shadow-sm">
+      <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="#home" class="flex items-center gap-3">
+            <img
+              src="assets/img/avatar.jpg"
+              alt="avatar"
+              class="w-10 h-10 rounded-full object-cover border"
+            />
+            <span class="font-semibold">Nasif Abdullah Pinaru</span>
+          </a>
 
-  <header class="fixed w-full bg-white/80 backdrop-blur z-40 shadow-sm">
-    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="#home" class="flex items-center gap-3">
-          <img src="assets/img/avatar.jpg" alt="avatar" class="w-10 h-10 rounded-full object-cover border" />
-          <span class="font-semibold">Nasif Abdullah Pinaru</span>
-        </a>
+          <nav id="nav" class="hidden md:flex gap-6 items-center">
+            <a class="hover:text-primary" href="#home">Home</a>
+            <a class="hover:text-primary" href="#skills">Skills</a>
+            <a class="hover:text-primary" href="#services">Services</a>
+            <a class="hover:text-primary" href="#projects">Work</a>
+            <a class="hover:text-primary" href="#experience">Experience</a>
+            <a class="hover:text-primary" href="#contact">Contact</a>
+          </nav>
 
-        <nav id="nav" class="hidden md:flex gap-6 items-center">
-          <a class="hover:text-primary" href="#home">Home</a>
-          <a class="hover:text-primary" href="#skills">Skills</a>
-          <a class="hover:text-primary" href="#services">Services</a>
-          <a class="hover:text-primary" href="#projects">Work</a>
-          <a class="hover:text-primary" href="#experience">Experience</a>
-          <a class="hover:text-primary" href="#contact">Contact</a>
-        </nav>
-
-   
-        <div class="md:hidden">
-          <button id="navToggle" aria-label="Toggle menu" class="p-2 rounded-md hover:bg-gray-100">
-            <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                 viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+          <div class="md:hidden">
+            <button
+              id="navToggle"
+              aria-label="Toggle menu"
+              class="p-2 rounded-md hover:bg-gray-100"
+            >
+              <svg
+                id="menuIcon"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div id="mobilePanel" class="md:hidden hidden border-t">
-      <div class="px-4 py-3 flex flex-col gap-2">
-        <a href="#home" class="py-2">Home</a>
-        <a href="#skills" class="py-2">Skills</a>
-        <a href="#services" class="py-2">Services</a>
-        <a href="#projects" class="py-2">Work</a>
-        <a href="#experience" class="py-2">Experience</a>
-        <a href="#contact" class="py-2">Contact</a>
+      <div id="mobilePanel" class="md:hidden hidden border-t">
+        <div class="px-4 py-3 flex flex-col gap-2">
+          <a href="#home" class="py-2">Home</a>
+          <a href="#skills" class="py-2">Skills</a>
+          <a href="#services" class="py-2">Services</a>
+          <a href="#projects" class="py-2">Work</a>
+          <a href="#experience" class="py-2">Experience</a>
+          <a href="#contact" class="py-2">Contact</a>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
+    <main class="pt-20">
+      <section id="home" class="min-h-[70vh] flex items-center">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <p class="text-sm text-gray-500">Hello, I'm</p>
+              <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+                Nasif Abdullah Pinaru
+              </h1>
+              <p class="mt-4 text-lg text-gray-700">
+                I build modern web interfaces with HTML, CSS and JavaScript. I
+                am learning the MERN stack and love solving problems with code.
+              </p>
 
-  <main class="pt-20">
+              <div class="mt-6 flex gap-3">
+                <a
+                  href="#projects"
+                  class="inline-flex items-center px-4 py-2 bg-primary text-white rounded-md shadow hover:opacity-95"
+                  >See my work</a
+                >
+                <a
+                  href="#contact"
+                  class="inline-flex items-center px-4 py-2 border rounded-md hover:bg-gray-50"
+                  >Contact me</a
+                >
+              </div>
 
-    <section id="home" class="min-h-[70vh] flex items-center">
-      <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div class="mt-6 flex flex-wrap gap-3 text-sm">
+                <span class="px-2 py-1 bg-gray-100 rounded">HTML</span>
+                <span class="px-2 py-1 bg-gray-100 rounded">CSS</span>
+                <span class="px-2 py-1 bg-gray-100 rounded">JavaScript</span>
+                <span class="px-2 py-1 bg-gray-100 rounded">Tailwind</span>
+              </div>
+            </div>
+
+            <div class="order-first md:order-last flex justify-center">
+              <div class="w-72 h-72 rounded-2xl overflow-hidden shadow-lg">
+                <img
+                  src="assets/img/avatar.jpg"
+                  alt="Nasif Abdullah Pinaru"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold">Skills</h2>
+          <p class="mt-2 text-gray-600">Technologies and tools I use</p>
+
+          <div
+            class="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4"
+          >
+            <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+              <div class="text-lg font-semibold">HTML</div>
+              <div class="text-sm text-gray-500 mt-1">Expert</div>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+              <div class="text-lg font-semibold">CSS</div>
+              <div class="text-sm text-gray-500 mt-1">Advanced</div>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+              <div class="text-lg font-semibold">JavaScript</div>
+              <div class="text-sm text-gray-500 mt-1">Intermediate</div>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+              <div class="text-lg font-semibold">Tailwind</div>
+              <div class="text-sm text-gray-500 mt-1">Intermediate</div>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+              <div class="text-lg font-semibold">Git</div>
+              <div class="text-sm text-gray-500 mt-1">Intermediate</div>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+              <div class="text-lg font-semibold">React (learning)</div>
+              <div class="text-sm text-gray-500 mt-1">Beginner</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="py-16">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold">Services</h2>
+          <div class="mt-6 grid gap-4 grid-cols-1 md:grid-cols-3">
+            <div class="p-6 border rounded-lg">
+              <h3 class="font-semibold">Frontend Development</h3>
+              <p class="mt-2 text-sm text-gray-600">
+                Pixel-perfect responsive interfaces with HTML, CSS and Tailwind.
+              </p>
+            </div>
+            <div class="p-6 border rounded-lg">
+              <h3 class="font-semibold">JavaScript & Interactivity</h3>
+              <p class="mt-2 text-sm text-gray-600">
+                Dynamic UI, DOM manipulations and small apps.
+              </p>
+            </div>
+            <div class="p-6 border rounded-lg">
+              <h3 class="font-semibold">Portfolio & Landing Pages</h3>
+              <p class="mt-2 text-sm text-gray-600">
+                Static sites or simple SPA for personal / business needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+          <div class="flex items-center justify-between">
+            <h2 class="text-2xl font-bold">Projects</h2>
+          </div>
+
+          <div class="mt-6 grid gap-6 grid-cols-1 md:grid-cols-3">
+            <article
+              class="group bg-white rounded-lg overflow-hidden shadow hover:shadow-lg"
+            >
+              <img
+                src="assets/img/project1.jpg"
+                alt="Project 1"
+                class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div class="p-4">
+                <h3 class="font-semibold">Project One</h3>
+                <p class="mt-2 text-sm text-gray-600">
+                  Short description of project one. Tech: HTML, CSS, JS
+                </p>
+                <div class="mt-3 flex gap-2">
+                  <a class="text-sm underline" href="#">Live</a>
+                  <a class="text-sm underline" href="#">Code</a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="group bg-white rounded-lg overflow-hidden shadow hover:shadow-lg"
+            >
+              <img
+                src="assets/img/project2.jpg"
+                alt="Project 2"
+                class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div class="p-4">
+                <h3 class="font-semibold">Project Two</h3>
+                <p class="mt-2 text-sm text-gray-600">
+                  Short description of project two. Tech: Tailwind, JS
+                </p>
+                <div class="mt-3 flex gap-2">
+                  <a class="text-sm underline" href="#">Live</a>
+                  <a class="text-sm underline" href="#">Code</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="py-16">
+        <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold">Work experience</h2>
+          <div class="mt-6 space-y-4">
+            <div class="p-4 border rounded-lg">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-semibold">Frontend Intern — Company A</h3>
+                  <p class="text-sm text-gray-500">June 2024 — Aug 2024</p>
+                </div>
+                <div class="text-sm text-gray-500">Remote</div>
+              </div>
+              <p class="mt-2 text-sm text-gray-600">
+                Built small UI components, fixed bugs and improved site
+                accessibility.
+              </p>
+            </div>
+
+            <div class="p-4 border rounded-lg">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="font-semibold">Freelance Projects</h3>
+                  <p class="text-sm text-gray-500">2023 — Present</p>
+                </div>
+                <div class="text-sm text-gray-500">Remote</div>
+              </div>
+              <p class="mt-2 text-sm text-gray-600">
+                Delivered landing pages and portfolio sites for small clients.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 md:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold">Contact</h2>
+          <p class="mt-2 text-gray-600">
+            Get in touch — I usually reply within a few days.
+          </p>
+
+          <form id="contactForm" class="mt-6 grid gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input
+                required
+                name="name"
+                placeholder="Your name"
+                class="p-3 border rounded"
+              />
+              <input
+                required
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                class="p-3 border rounded"
+              />
+            </div>
+            <input
+              name="subject"
+              placeholder="Subject"
+              class="p-3 border rounded"
+            />
+            <textarea
+              required
+              name="message"
+              rows="5"
+              placeholder="Message"
+              class="p-3 border rounded"
+            ></textarea>
+
+            <div class="flex items-center gap-3">
+              <button
+                type="submit"
+                class="px-4 py-2 bg-accent text-white rounded"
+              >
+                Send message
+              </button>
+              <div id="formMsg" class="text-sm text-gray-600"></div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <footer class="py-8">
+        <div
+          class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 text-center text-sm text-gray-500"
+        >
           <div>
-            <p class="text-sm text-gray-500">Hello, I'm</p>
-            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Nasif Abdullah Pinaru</h1>
-            <p class="mt-4 text-lg text-gray-700">I build modern web interfaces with HTML, CSS and JavaScript. I am learning the MERN stack and love solving problems with code.</p>
-
-            <div class="mt-6 flex gap-3">
-              <a href="#projects" class="inline-flex items-center px-4 py-2 bg-primary text-white rounded-md shadow hover:opacity-95">See my work</a>
-              <a href="#contact" class="inline-flex items-center px-4 py-2 border rounded-md hover:bg-gray-50">Contact me</a>
-            </div>
-
-            <div class="mt-6 flex flex-wrap gap-3 text-sm">
-              <span class="px-2 py-1 bg-gray-100 rounded">HTML</span>
-              <span class="px-2 py-1 bg-gray-100 rounded">CSS</span>
-              <span class="px-2 py-1 bg-gray-100 rounded">JavaScript</span>
-              <span class="px-2 py-1 bg-gray-100 rounded">Tailwind</span>
-            </div>
+            © <span id="year"></span> Nasif Abdullah Pinaru — Built with HTML,
+            Tailwind & JavaScript
           </div>
-
-          <div class="order-first md:order-last flex justify-center">
-            <div class="w-72 h-72 rounded-2xl overflow-hidden shadow-lg">
-              <img src="assets/img/avatar.jpg" alt="Nasif Abdullah Pinaru" class="w-full h-full object-cover" />
-            </div>
+          <div class="mt-2 flex items-center justify-center gap-3">
+            <a href="#" class="underline">Privacy</a>
+            <a href="#" class="underline">Terms</a>
           </div>
         </div>
-      </div>
-    </section>
+      </footer>
+    </main>
 
- 
-    <section id="skills" class="py-16 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
-        <h2 class="text-2xl font-bold">Skills</h2>
-        <p class="mt-2 text-gray-600">Technologies and tools I use</p>
-
-        <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-     
-          <div class="bg-white p-4 rounded-lg shadow-sm text-center">
-            <div class="text-lg font-semibold">HTML</div>
-            <div class="text-sm text-gray-500 mt-1">Expert</div>
-          </div>
-
-          <div class="bg-white p-4 rounded-lg shadow-sm text-center">
-            <div class="text-lg font-semibold">CSS</div>
-            <div class="text-sm text-gray-500 mt-1">Advanced</div>
-          </div>
-
-          <div class="bg-white p-4 rounded-lg shadow-sm text-center">
-            <div class="text-lg font-semibold">JavaScript</div>
-            <div class="text-sm text-gray-500 mt-1">Intermediate</div>
-          </div>
-
-          <div class="bg-white p-4 rounded-lg shadow-sm text-center">
-            <div class="text-lg font-semibold">Tailwind</div>
-            <div class="text-sm text-gray-500 mt-1">Intermediate</div>
-          </div>
-
-          <div class="bg-white p-4 rounded-lg shadow-sm text-center">
-            <div class="text-lg font-semibold">Git</div>
-            <div class="text-sm text-gray-500 mt-1">Intermediate</div>
-          </div>
-
-          <div class="bg-white p-4 rounded-lg shadow-sm text-center">
-            <div class="text-lg font-semibold">React (learning)</div>
-            <div class="text-sm text-gray-500 mt-1">Beginner</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
- 
-    <section id="services" class="py-16">
-      <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
-        <h2 class="text-2xl font-bold">Services</h2>
-        <div class="mt-6 grid gap-4 grid-cols-1 md:grid-cols-3">
-          <div class="p-6 border rounded-lg">
-            <h3 class="font-semibold">Frontend Development</h3>
-            <p class="mt-2 text-sm text-gray-600">Pixel-perfect responsive interfaces with HTML, CSS and Tailwind.</p>
-          </div>
-          <div class="p-6 border rounded-lg">
-            <h3 class="font-semibold">JavaScript & Interactivity</h3>
-            <p class="mt-2 text-sm text-gray-600">Dynamic UI, DOM manipulations and small apps.</p>
-          </div>
-          <div class="p-6 border rounded-lg">
-            <h3 class="font-semibold">Portfolio & Landing Pages</h3>
-            <p class="mt-2 text-sm text-gray-600">Static sites or simple SPA for personal / business needs.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section id="projects" class="py-16 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
-        <div class="flex items-center justify-between">
-          <h2 class="text-2xl font-bold">Projects</h2>
-        </div>
-
-        <div class="mt-6 grid gap-6 grid-cols-1 md:grid-cols-3">
-
-          <article class="group bg-white rounded-lg overflow-hidden shadow hover:shadow-lg">
-            <img src="assets/img/project1.jpg" alt="Project 1" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-300" />
-            <div class="p-4">
-              <h3 class="font-semibold">Project One</h3>
-              <p class="mt-2 text-sm text-gray-600">Short description of project one. Tech: HTML, CSS, JS</p>
-              <div class="mt-3 flex gap-2">
-                <a class="text-sm underline" href="#">Live</a>
-                <a class="text-sm underline" href="#">Code</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="group bg-white rounded-lg overflow-hidden shadow hover:shadow-lg">
-            <img src="assets/img/project2.jpg" alt="Project 2" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-300" />
-            <div class="p-4">
-              <h3 class="font-semibold">Project Two</h3>
-              <p class="mt-2 text-sm text-gray-600">Short description of project two. Tech: Tailwind, JS</p>
-              <div class="mt-3 flex gap-2">
-                <a class="text-sm underline" href="#">Live</a>
-                <a class="text-sm underline" href="#">Code</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-  
-    <section id="experience" class="py-16">
-      <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
-        <h2 class="text-2xl font-bold">Work experience</h2>
-        <div class="mt-6 space-y-4">
-          <div class="p-4 border rounded-lg">
-            <div class="flex justify-between items-start">
-              <div>
-                <h3 class="font-semibold">Frontend Intern — Company A</h3>
-                <p class="text-sm text-gray-500">June 2024 — Aug 2024</p>
-              </div>
-              <div class="text-sm text-gray-500">Remote</div>
-            </div>
-            <p class="mt-2 text-sm text-gray-600">Built small UI components, fixed bugs and improved site accessibility.</p>
-          </div>
-
-          <div class="p-4 border rounded-lg">
-            <div class="flex justify-between items-start">
-              <div>
-                <h3 class="font-semibold">Freelance Projects</h3>
-                <p class="text-sm text-gray-500">2023 — Present</p>
-              </div>
-              <div class="text-sm text-gray-500">Remote</div>
-            </div>
-            <p class="mt-2 text-sm text-gray-600">Delivered landing pages and portfolio sites for small clients.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    
-    <section id="contact" class="py-16 bg-gray-50">
-      <div class="max-w-3xl mx-auto px-4 md:px-6 lg:px-8">
-        <h2 class="text-2xl font-bold">Contact</h2>
-        <p class="mt-2 text-gray-600">Get in touch — I usually reply within a few days.</p>
-
-        <form id="contactForm" class="mt-6 grid gap-4">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input required name="name" placeholder="Your name" class="p-3 border rounded" />
-            <input required name="email" type="email" placeholder="you@example.com" class="p-3 border rounded" />
-          </div>
-          <input name="subject" placeholder="Subject" class="p-3 border rounded" />
-          <textarea required name="message" rows="5" placeholder="Message" class="p-3 border rounded"></textarea>
-
-          <div class="flex items-center gap-3">
-            <button type="submit" class="px-4 py-2 bg-accent text-white rounded">Send message</button>
-            <div id="formMsg" class="text-sm text-gray-600"></div>
-          </div>
-        </form>
-      </div>
-    </section>
-
-
-    <footer class="py-8">
-      <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 text-center text-sm text-gray-500">
-        <div>© <span id="year"></span> Nasif Abdullah Pinaru — Built with HTML, Tailwind & JavaScript</div>
-        <div class="mt-2 flex items-center justify-center gap-3">
-          <a href="#" class="underline">Privacy</a>
-          <a href="#" class="underline">Terms</a>
-        </div>
-      </div>
-    </footer>
-
-  </main>
-
-  <script src="assets/js/main.js"></script>
-</body>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
